@@ -9,3 +9,10 @@ Hooks.once("init", () => {
   registerAttunementHooks();
   registerValueSync();
 });
+
+// Fires after every module's lang.json has already been merged into game.i18n.translations,
+// so overriding here always wins regardless of module load order (unlike a plain lang.json
+// entry, which could get overwritten depending on which module's file merges last).
+Hooks.once("i18nInit", () => {
+  game.i18n.translations["TIDY5E.AttunementWarning"] = game.i18n.localize(`${MODULE_ID}.tidy5eOverrides.attunementWarning`);
+});
