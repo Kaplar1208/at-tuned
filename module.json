@@ -1,8 +1,8 @@
 {
   "id": "at-tuned",
   "title": "At-Tuned",
-  "description": "Sistema de puntos de attunement configurable por rareza, en reemplazo del límite fijo de 3 ítems, con soporte especial para Artificer.",
-  "version": "0.1.6",
+  "description": "Replaces the fixed 3-item attunement limit with a per-character point budget weighted by item rarity, with special support for the Artificer class.",
+  "version": "0.2.0",
   "compatibility": {
     "minimum": "13.341",
     "verified": "13.351"
@@ -13,7 +13,8 @@
         "id": "dnd5e",
         "type": "system",
         "compatibility": {
-          "minimum": "4.0.0"
+          "minimum": "4.0.0",
+          "verified": "5.3.1"
         }
       }
     ],
@@ -21,18 +22,26 @@
       {
         "id": "lib-wrapper",
         "type": "module",
-        "reason": "Permite calcular con precisión el valor ponderado de attunement en el modelo de datos (sin esto, se usa un cálculo alternativo por hooks)."
+        "reason": "Optional: enables precise calculation of the weighted attunement value at the data model level. Without it, the module falls back to a hook-based recalculation."
       },
       {
         "id": "tidy5e-sheet",
         "type": "module",
-        "reason": "Compatibilidad verificada con la hoja de personaje de Tidy5e."
+        "reason": "Optional: verified compatibility with Tidy5e's character sheet."
       }
     ]
   },
-  "authors": [{"name": "Kaplar"}],
-  "esmodules": ["scripts/at-tuned.mjs"],
-  "styles": ["styles/at-tuned.css"],
+  "authors": [
+    {
+      "name": "Kaplar"
+    }
+  ],
+  "esmodules": [
+    "scripts/at-tuned.mjs"
+  ],
+  "styles": [
+    "styles/at-tuned.css"
+  ],
   "languages": [
     {
       "lang": "en",
@@ -45,9 +54,7 @@
       "path": "lang/es.json"
     }
   ],
-  "url": "",
-  "manifest": "https://raw.githubusercontent.com/Kaplar1208/at-tuned/dev/module.json",
-  "download": "https://github.com/Kaplar1208/at-tuned/archive/refs/heads/dev.zip",
-  "readme": "README.md",
-  "license": "LICENSE"
+  "url": "https://github.com/Kaplar1208/at-tuned",
+  "manifest": "https://raw.githubusercontent.com/Kaplar1208/at-tuned/main/module.json",
+  "download": "https://github.com/Kaplar1208/at-tuned/releases/latest/download/at-tuned.zip"
 }
