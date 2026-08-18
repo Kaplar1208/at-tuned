@@ -33,7 +33,5 @@
       "overBudget": "No hay suficientes puntos de attunement ({value}/{budget})."
     }
   },
-  "TIDY5E": {
-    "AttunementWarning": "No hay suficientes puntos de attunement disponibles (usando {number} actualmente)."
-  }
+  "TIDY5E.AttunementWarning": "No hay suficientes puntos de attunement disponibles (usando {number} actualmente)."
 }
