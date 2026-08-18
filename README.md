@@ -7,7 +7,7 @@ A Foundry VTT module that replaces D&D5e's fixed 3-item attunement limit with a 
 ## Requirements
 
 - Foundry VTT v13.341+
-- dnd5e system v4+
+- dnd5e system v5+
 - Tidy5e Sheet (optional) — the counter shows correctly with no extra setup, since the module reuses dnd5e's own attunement fields
 - [lib-wrapper](https://foundryvtt.com/packages/lib-wrapper) (optional, recommended) — enables precise calculation of the weighted attunement value directly on the data model. Without it, the module falls back to recalculating on relevant hooks (item/actor changes), which is a bit less immediate but still fully functional.
 

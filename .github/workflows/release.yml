@@ -45,6 +45,7 @@ jobs:
           cp module.json build/module.json
           sed -i "s|releases/latest/download|releases/download/${{ steps.version.outputs.tag }}|g" build/module.json
           cp -r lang scripts templates styles build/
+          cp LICENSE build/
           cd build
           zip -r ../at-tuned.zip .
       # -------------------------------------------------

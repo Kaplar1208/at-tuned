@@ -2,7 +2,7 @@
   "id": "at-tuned",
   "title": "At-Tuned",
   "description": "Replaces the fixed 3-item attunement limit with a per-character point budget weighted by item rarity, with special support for the Artificer class.",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "compatibility": {
     "minimum": "13.341",
     "verified": "13.351"
@@ -56,5 +56,6 @@
   ],
   "url": "https://github.com/Kaplar1208/at-tuned",
   "manifest": "https://raw.githubusercontent.com/Kaplar1208/at-tuned/main/module.json",
-  "download": "https://github.com/Kaplar1208/at-tuned/releases/latest/download/at-tuned.zip"
+  "download": "https://github.com/Kaplar1208/at-tuned/releases/latest/download/at-tuned.zip",
+  "license": "LICENSE"
 }
