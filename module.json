@@ -2,7 +2,7 @@
   "id": "at-tuned",
   "title": "At-Tuned",
   "description": "Sistema de puntos de attunement configurable por rareza, en reemplazo del límite fijo de 3 ítems, con soporte especial para Artificer.",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "compatibility": {
     "minimum": "13.341",
     "verified": "13.351"
