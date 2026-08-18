@@ -1,1 +1,36 @@
-{}
+{
+  "at-tuned": {
+    "settings": {
+      "configMenu": {
+        "name": "Attunement Points",
+        "label": "Configure Attunement Points",
+        "hint": "Configure rarity weights and attunement point budgets per character."
+      }
+    },
+    "configApp": {
+      "title": "Attunement Points Configuration",
+      "rarityWeights": "Point Cost by Rarity",
+      "defaultBudgets": "Default Budgets",
+      "defaultBudgetNormal": "Default budget (other classes)",
+      "defaultBudgetArtificer": "Default budget (Artificer)",
+      "characters": "Characters",
+      "characterName": "Name",
+      "computedBudget": "Computed budget",
+      "override": "Manual override",
+      "artificerBadge": "Artificer",
+      "noCharacters": "No player characters found.",
+      "save": "Save"
+    },
+    "rarity": {
+      "common": "Common",
+      "uncommon": "Uncommon",
+      "rare": "Rare",
+      "veryRare": "Very Rare",
+      "legendary": "Legendary",
+      "artifact": "Artifact"
+    },
+    "warnings": {
+      "overBudget": "Not enough attunement points ({value}/{budget})."
+    }
+  }
+}

@@ -1,15 +1,38 @@
 {
   "id": "at-tuned",
   "title": "At-Tuned",
-  "description": "",
+  "description": "Sistema de puntos de attunement configurable por rareza, en reemplazo del límite fijo de 3 ítems, con soporte especial para Artificer.",
   "version": "0.1.0",
   "compatibility": {
-    "minimum": "13",
+    "minimum": "13.341",
     "verified": "13.351"
   },
+  "relationships": {
+    "systems": [
+      {
+        "id": "dnd5e",
+        "type": "system",
+        "compatibility": {
+          "minimum": "4.0.0"
+        }
+      }
+    ],
+    "recommends": [
+      {
+        "id": "lib-wrapper",
+        "type": "module",
+        "reason": "Permite calcular con precisión el valor ponderado de attunement en el modelo de datos (sin esto, se usa un cálculo alternativo por hooks)."
+      },
+      {
+        "id": "tidy5e-sheet",
+        "type": "module",
+        "reason": "Compatibilidad verificada con la hoja de personaje de Tidy5e."
+      }
+    ]
+  },
   "authors": [{"name": "Kaplar"}],
-  "scripts": [],
-  "styles": [],
+  "scripts": ["scripts/at-tuned.mjs"],
+  "styles": ["styles/at-tuned.css"],
   "languages": [
     {
       "lang": "en",
@@ -23,8 +46,8 @@
     }
   ],
   "url": "",
-  "manifest": "https://github.com/Kaplar1208/at-tuned/releases/latest/download/module.json",
-  "download": "https://github.com/Kaplar1208/at-tuned/releases/latest/download/at-tuned.zip",
+  "manifest": "https://raw.githubusercontent.com/Kaplar1208/at-tuned/dev/module.json",
+  "download": "https://github.com/Kaplar1208/at-tuned/archive/refs/heads/dev.zip",
   "readme": "README.md",
   "license": "LICENSE"
 }

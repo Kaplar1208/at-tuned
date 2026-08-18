@@ -1,1 +1,36 @@
-{}
+{
+  "at-tuned": {
+    "settings": {
+      "configMenu": {
+        "name": "Puntos de Attunement",
+        "label": "Configurar Puntos de Attunement",
+        "hint": "Configura el costo por rareza y el presupuesto de puntos de attunement por personaje."
+      }
+    },
+    "configApp": {
+      "title": "Configuración de Puntos de Attunement",
+      "rarityWeights": "Costo en Puntos por Rareza",
+      "defaultBudgets": "Presupuestos por Defecto",
+      "defaultBudgetNormal": "Presupuesto por defecto (otras clases)",
+      "defaultBudgetArtificer": "Presupuesto por defecto (Artificer)",
+      "characters": "Personajes",
+      "characterName": "Nombre",
+      "computedBudget": "Presupuesto calculado",
+      "override": "Ajuste manual",
+      "artificerBadge": "Artificer",
+      "noCharacters": "No hay personajes de jugador.",
+      "save": "Guardar"
+    },
+    "rarity": {
+      "common": "Común",
+      "uncommon": "Poco Común",
+      "rare": "Raro",
+      "veryRare": "Muy Raro",
+      "legendary": "Legendario",
+      "artifact": "Artefacto"
+    },
+    "warnings": {
+      "overBudget": "No hay suficientes puntos de attunement ({value}/{budget})."
+    }
+  }
+}

@@ -1,0 +1,61 @@
+<section class="at-tuned-config">
+  <fieldset>
+    <legend>{{localize "at-tuned.configApp.rarityWeights"}}</legend>
+    <div class="rarity-grid">
+      {{#each rarities as |rarity|}}
+        <label for="rarityWeights.{{rarity.key}}">{{localize rarity.label}}</label>
+        <input type="number" min="0" step="1"
+               id="rarityWeights.{{rarity.key}}"
+               name="rarityWeights.{{rarity.key}}"
+               value="{{rarity.weight}}">
+      {{/each}}
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>{{localize "at-tuned.configApp.defaultBudgets"}}</legend>
+    <div class="budget-grid">
+      <label for="defaultBudgetNormal">{{localize "at-tuned.configApp.defaultBudgetNormal"}}</label>
+      <input type="number" min="0" step="1" id="defaultBudgetNormal" name="defaultBudgetNormal" value="{{defaultBudgetNormal}}">
+
+      <label for="defaultBudgetArtificer">{{localize "at-tuned.configApp.defaultBudgetArtificer"}}</label>
+      <input type="number" min="0" step="1" id="defaultBudgetArtificer" name="defaultBudgetArtificer" value="{{defaultBudgetArtificer}}">
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>{{localize "at-tuned.configApp.characters"}}</legend>
+    <table class="characters-table">
+      <thead>
+        <tr>
+          <th>{{localize "at-tuned.configApp.characterName"}}</th>
+          <th>{{localize "at-tuned.configApp.computedBudget"}}</th>
+          <th>{{localize "at-tuned.configApp.override"}}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each characters as |character|}}
+          <tr>
+            <td>
+              {{character.name}}
+              {{#if character.isArtificer}}<span class="artificer-badge">{{localize "at-tuned.configApp.artificerBadge"}}</span>{{/if}}
+            </td>
+            <td>{{character.computedBudget}}</td>
+            <td>
+              <input type="number" min="0" step="1"
+                     name="overrides.{{character.id}}"
+                     value="{{character.override}}"
+                     placeholder="{{character.computedBudget}}">
+            </td>
+          </tr>
+        {{else}}
+          <tr><td colspan="3">{{localize "at-tuned.configApp.noCharacters"}}</td></tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </fieldset>
+
+  <footer class="form-footer">
+    <button type="submit"><i class="fa-solid fa-save"></i> {{localize "at-tuned.configApp.save"}}</button>
+  </footer>
+</section>
