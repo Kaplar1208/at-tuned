@@ -18,9 +18,13 @@ export function registerValueSync() {
 }
 
 function registerLibWrapperSync() {
+  // dnd5e's vanilla +1-per-item attunement count is applied in Actor5e#prepareData,
+  // *after* prepareDerivedData returns (via `this.items.forEach(item => item.prepareFinalAttributes())`).
+  // Wrapping prepareDerivedData runs too early and gets stomped by that later pass, so we
+  // wrap prepareData itself to override the value after everything else has settled.
   libWrapper.register(
     MODULE_ID,
-    "CONFIG.Actor.documentClass.prototype.prepareDerivedData",
+    "CONFIG.Actor.documentClass.prototype.prepareData",
     function (wrapped, ...args) {
       wrapped(...args);
       if (this.type !== "character") return;
