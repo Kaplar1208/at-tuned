@@ -33,7 +33,7 @@
       "overBudget": "Not enough attunement points ({value}/{budget})."
     },
     "tidy5eOverrides": {
-      "attunementWarning": "Not enough attunement points available (currently using {number})."
+      "attunementWarning": "Attunement budget reached ({number} points in use)."
     }
   }
 }
